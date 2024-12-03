@@ -27,7 +27,7 @@ const hearts = {
   3: document.getElementById('heart3')
 }
 
-const fullHeartSrc = 'https://github.com/DMWSheol/TilebasedGame/blob/b8b722f668fc9d6646f43cd46ae39a622faa3036/img/RedHeart/32x32/32x32RedHeart1.png';
+const fullHeartSrc = 'img/RedHeart/32x32/32x32RedHeart1.png';
 const halfHeartSrc = 'img/RedHeart/32x32/32x32RedHeart2.png';
 const emptyHeartSrc = 'img/RedHeart/32x32/32x32RedHeart3.png'
 
@@ -287,18 +287,18 @@ function getTilesForIndex(tileIndex){
 function renderCharacter(){
   let currentFrameY = character.currentFrameY;
   
-  character.sprite.src = '/img/character/idle.png';
+  character.sprite.src = 'img/character/idle.png';
   
   switch(character.direction){
-    case 'still': character.sprite.src = '/img/character/idle.png'; currentFrameY = 3; break;
+    case 'still': character.sprite.src = 'img/character/idle.png'; currentFrameY = 3; break;
     case 'w':
-    case 'up': character.sprite.src = '/img/character/run.png'; currentFrameY = 4; break;
+    case 'up': character.sprite.src = 'img/character/run.png'; currentFrameY = 4; break;
     case 's':
-    case 'down': character.sprite.src = '/img/character/run.png'; currentFrameY = 3; break;
+    case 'down': character.sprite.src = 'img/character/run.png'; currentFrameY = 3; break;
     case 'a':
-    case 'left': character.sprite.src = '/img/character/run.png'; currentFrameY = 2; break;
+    case 'left': character.sprite.src = 'img/character/run.png'; currentFrameY = 2; break;
     case 'd':
-    case 'right': character.sprite.src = '/img/character/run.png'; currentFrameY = 1; break;
+    case 'right': character.sprite.src = 'img/character/run.png'; currentFrameY = 1; break;
   }
   
   let frameX = animationFrameX * 80 - 45;
