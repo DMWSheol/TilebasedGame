@@ -636,7 +636,7 @@ async function initiateNewLevel(){
 
 //Renders the new level
 function renderNewLevel(){
-  if(currentLevel !== maxLevel){ currentLevel++ }else{ endOfGame(); return };
+  if(currentLevel < maxLevel){ currentLevel++ }else{ endOfGame(); return };
 
   //debug
   currentLevelDisplay.innerHTML = currentLevel;
