@@ -205,7 +205,7 @@ async function loadMap(level){
   await Promise.all(mapData.tilesets.map(async tileset => {
     loadAllEnemies(tileset)
 }))
-  render();
+  render()
 }
 
 function loadAllEnemies(tileset){
