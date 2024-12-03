@@ -27,7 +27,7 @@ const hearts = {
   3: document.getElementById('heart3')
 }
 
-const fullHeartSrc = 'img/RedHeart/32x32/32x32RedHeart1.png';
+const fullHeartSrc = 'https://github.com/DMWSheol/TilebasedGame/blob/b8b722f668fc9d6646f43cd46ae39a622faa3036/img/RedHeart/32x32/32x32RedHeart1.png';
 const halfHeartSrc = 'img/RedHeart/32x32/32x32RedHeart2.png';
 const emptyHeartSrc = 'img/RedHeart/32x32/32x32RedHeart3.png'
 
