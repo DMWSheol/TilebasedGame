@@ -27,9 +27,9 @@ const hearts = {
   3: document.getElementById('heart3')
 }
 
-const fullHeartSrc = 'img\/RedHeart\/32x32\/32x32RedHeart1.png';
-const halfHeartSrc = 'img\/RedHeart\/32x32\/32x32RedHeart2.png';
-const emptyHeartSrc = 'img\/RedHeart\/32x32\/32x32RedHeart3.png'
+const fullHeartSrc = 'img/RedHeart/32x32/32x32RedHeart1.png';
+const halfHeartSrc = 'img/RedHeart/32x32/32x32RedHeart2.png';
+const emptyHeartSrc = 'img/RedHeart/32x32/32x32RedHeart3.png'
 
 //Useful data
 const TILE_SIZE = 16;
