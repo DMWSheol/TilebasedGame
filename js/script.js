@@ -45,6 +45,10 @@ let currentLevel = 1;
 let maxLevel = 9; 
 let invis = false;
 
+
+//debug Data
+let debugDataByLevel = {};
+
 //info about each level
 const levelInfo = {
   1: {
@@ -640,6 +644,7 @@ function renderNewLevel(){
 
   //debug
   currentLevelDisplay.innerHTML = currentLevel;
+  debugDataByLevel[currentLevel] = [character, characterInventory]
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   cancelAnimationFrame(animFrame);
@@ -696,6 +701,8 @@ const endScreenTitle = document.getElementById('congrats');
 const endScreenSubTitle = document.getElementById('subCongrats');
 // If game has ended
 function endOfGame(death){
+  debugDataByLevel[maxLevel] = [character, characterInventory]
+
   gameOn = false;
   endTime = Date.now()
   updateInventory();
@@ -789,8 +796,7 @@ function leaderboard(nameValue){
           link.remove()
           };
 
-    const debugData = JSON.stringify([characterInventory, character])
-    saveTemplateAsFile(`characterInfo ${nameValue}.json`, debugData);
+    saveTemplateAsFile(`characterInfo ${nameValue}.json`, JSON.stringify(debugDataByLevel));
 
   }
   window.location.reload()
