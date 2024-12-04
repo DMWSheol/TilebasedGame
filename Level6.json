@@ -2785,7 +2785,7 @@
                         {
                          "name":"Collidable",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }, 
                         {
                          "name":"Subtype",
@@ -2804,7 +2804,7 @@
                         {
                          "name":"Collidable",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }, 
                         {
                          "name":"Subtype",
@@ -2963,7 +2963,7 @@
                         {
                          "name":"Collidable",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }, 
                         {
                          "name":"Subtype",
@@ -2982,7 +2982,7 @@
                         {
                          "name":"Collidable",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }, 
                         {
                          "name":"Subtype",

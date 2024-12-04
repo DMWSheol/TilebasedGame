@@ -151,15 +151,15 @@
          "name":"MultiTiled",
          "objects":[
                 {
-                 "height":30.125,
+                 "height":33.25,
                  "id":30,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":32.5,
-                 "x":591.75,
-                 "y":160.875
+                 "width":35.625,
+                 "x":588.625,
+                 "y":157.75
                 }],
          "opacity":1,
          "type":"objectgroup",

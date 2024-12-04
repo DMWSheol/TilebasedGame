@@ -159,7 +159,7 @@ const infiLives = document.getElementById('infiLives');
 //First initialization
 function startGame(){
 
-  if(infiLives.checked) {characterInventory.health = 10000; console.log(characterInventory.health)};
+  if(infiLives.checked) {characterInventory.health = 10000; debugDataByLevel['infiLives'] = true; console.log(characterInventory.health)};
   //debug
   const levelDebugInp = document.getElementById('levelPicker');
   let chosenLevel = levelDebugInp.value || false;
