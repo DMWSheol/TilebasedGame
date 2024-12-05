@@ -524,11 +524,12 @@ function getCollectible(characterCorners){
             characterInventory.coins++;
             characterInventory.totalCoinCount++;
             updateInventory();
-          }else if(tileProperties[tileIndex]?.Subtype === 'Golden Present'){
-            characterInventory.coins += 4;
-            characterInventory.totalCoinCount += 4;
-            characterInventory.goldenPresents++;
-            updateInventory();
+            if(tileProperties[tileIndex]?.Subtype === 'Golden Present'){
+              characterInventory.coins += 4;
+              characterInventory.totalCoinCount += 4;
+              characterInventory.goldenPresents++;
+              updateInventory();
+              } 
           }else if(tileProperties[tileIndex]?.Type === 'Potion'){
             characterInventory.totalPotionCount++;
             if(tileProperties[tileIndex]?.Subtype === 'SmallHealth'){
@@ -705,6 +706,8 @@ gameUpdate = setInterval(updateCharacterPos, 1000/30);
 
 const endScreenTitle = document.getElementById('congrats');
 const endScreenSubTitle = document.getElementById('subCongrats');
+const goldenPresentStat = document.getElementById('goldenStat');
+
 // If game has ended
 function endOfGame(death){
   debugDataByLevel[maxLevel] = [character, characterInventory]
@@ -735,6 +738,9 @@ function endOfGame(death){
   scoreStat.innerHTML += `Score: ${characterInventory.score}`;
   inventoryDisplay.style.display = 'none';
   preEndScreen.style.display = 'flex';
+  if(characterInventory.goldenPresents !== 0){
+    goldenPresentStat.innerHTML += `${characterInventory.goldenPresents}/9 Golden Presents`
+  }
   
   submitButtonLeaderboard.addEventListener("submit", function(event){
     event.preventDefault();
