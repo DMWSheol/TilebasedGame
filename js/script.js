@@ -132,7 +132,8 @@ const characterInventory = {
   totalPotionCount: 0,
   score: 0,
   health: 6,
-  totalHits: 0
+  totalHits: 0,
+  goldenPresents: 0,
 };
 
 //Keystates
@@ -522,6 +523,11 @@ function getCollectible(characterCorners){
           }else if(tileProperties[tileIndex]?.Type === 'Coin'){
             characterInventory.coins++;
             characterInventory.totalCoinCount++;
+            updateInventory();
+          }else if(tileProperties[tileIndex]?.Subtype === 'Golden Present'){
+            characterInventory.coins += 4;
+            characterInventory.totalCoinCount += 4;
+            characterInventory.goldenPresents++;
             updateInventory();
           }else if(tileProperties[tileIndex]?.Type === 'Potion'){
             characterInventory.totalPotionCount++;
